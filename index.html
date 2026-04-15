@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leticia Mendes UX/UI Designer & Front-end Developer</title>
+  <title>Leticia Mendes — UX/UI Designer e Front-end Developer</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --coral: #D85A30;
       --coral-light: #F0997B;
@@ -17,416 +16,128 @@
       --text: #1a1a1a;
       --text-muted: #888780;
       --white: #ffffff;
+      --bg-soft: #fafaf9;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.6;
-    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); background: #fff; line-height: 1.6; overflow-x: hidden; }
 
     /* NAV */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 64px;
-      border-bottom: 0.5px solid var(--coral-border);
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px);
-      z-index: 100;
-    }
-
-    .nav-logo {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--coral-darker);
-      text-decoration: none;
-      letter-spacing: -0.3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 64px; border-bottom: 0.5px solid var(--coral-border); position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); z-index: 100; }
+    .nav-logo { font-size: 16px; font-weight: 600; color: var(--coral-darker); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--coral); }
-
-    .nav-cta {
-      font-size: 14px;
-      font-weight: 500;
-      background: var(--coral);
-      color: #fff;
-      border: none;
-      padding: 10px 22px;
-      border-radius: 24px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
+    .nav-cta { font-size: 14px; font-weight: 500; background: var(--coral); color: #fff; border: none; padding: 10px 22px; border-radius: 24px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--coral-dark); }
 
     /* HERO */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-      padding: 80px 64px 64px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
+    .hero { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 80px 64px 64px; max-width: 1100px; margin: 0 auto; }
     .hero-text { flex: 1; }
-
-    .hero-tag {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 500;
-      background: var(--coral-pale);
-      color: var(--coral-dark);
-      padding: 5px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    .hero-title {
-      font-size: 52px;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
-    }
-
+    .hero-tag { display: inline-block; font-size: 13px; font-weight: 500; background: var(--coral-pale); color: var(--coral-dark); padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
+    .hero-title { font-size: 52px; font-weight: 700; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
     .hero-title span { color: var(--coral); }
-
-    .hero-desc {
-      font-size: 17px;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 36px;
-      max-width: 460px;
-    }
-
+    .hero-desc { font-size: 17px; color: var(--text-muted); line-height: 1.75; margin-bottom: 36px; max-width: 460px; }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    .btn-primary {
-      font-size: 15px;
-      font-weight: 500;
-      background: var(--coral);
-      color: #fff;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 28px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
-
-    .btn-secondary {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--coral);
-      background: none;
-      border: 1.5px solid var(--coral-light);
-      padding: 13px 28px;
-      border-radius: 28px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    .btn-secondary:hover { background: var(--coral-pale); transform: translateY(-1px); }
-
-    .hero-photo-wrap {
-      flex-shrink: 0;
-      position: relative;
-    }
-
-    .hero-photo {
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 4px solid var(--coral-light);
-      outline: 8px solid var(--coral-pale);
-    }
-
-    .hero-badge {
-      position: absolute;
-      bottom: 16px;
-      right: -16px;
-      background: var(--white);
-      border: 1px solid var(--coral-border);
-      border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--coral-dark);
-      white-space: nowrap;
-      box-shadow: 0 2px 12px rgba(216,90,48,0.1);
-    }
+    .btn-primary { font-size: 15px; font-weight: 500; background: var(--coral); color: #fff; border: none; padding: 14px 28px; border-radius: 28px; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+    .btn-primary:hover { background: var(--coral-dark); transform: translateY(-2px); }
+    .btn-secondary { font-size: 15px; font-weight: 500; color: var(--coral); background: none; border: 1.5px solid var(--coral-light); padding: 13px 28px; border-radius: 28px; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+    .btn-secondary:hover { background: var(--coral-pale); transform: translateY(-2px); }
+    .hero-photo-wrap { flex-shrink: 0; position: relative; }
+    .hero-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; object-position: center top; border: 4px solid var(--coral-light); outline: 8px solid var(--coral-pale); }
+    .hero-badge { position: absolute; bottom: 16px; right: -16px; background: var(--white); border: 1px solid var(--coral-border); border-radius: 20px; padding: 7px 14px; font-size: 12px; font-weight: 500; color: var(--coral-dark); white-space: nowrap; }
+    .hero-badge::before { content: ''; display: inline-block; width: 8px; height: 8px; background: #22c55e; border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.7;transform:scale(1.2)} }
 
     /* SKILLS STRIP */
-    .skills-strip {
-      display: flex;
-      gap: 10px;
-      padding: 0 64px 56px;
-      flex-wrap: wrap;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .skill-pill {
-      font-size: 13px;
-      background: var(--coral-pale);
-      color: var(--coral-darker);
-      padding: 6px 16px;
-      border-radius: 20px;
-      border: 0.5px solid var(--coral-border);
-    }
+    .skills-strip { display: flex; gap: 10px; padding: 0 64px 56px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
+    .skill-pill { font-size: 13px; background: var(--coral-pale); color: var(--coral-darker); padding: 6px 16px; border-radius: 20px; border: 0.5px solid var(--coral-border); transition: transform 0.15s; cursor: default; }
+    .skill-pill:hover { transform: translateY(-2px); }
 
     /* DIVIDER */
-    .divider {
-      height: 0.5px;
-      background: var(--coral-border);
-      margin: 0 64px;
-    }
+    .divider { height: 0.5px; background: var(--coral-border); margin: 0 64px; }
 
-    /* PROJECTS */
-    .projects {
-      padding: 64px 64px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    /* SOBRE */
+    .sobre { padding: 72px 64px; max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow { font-size: 12px; font-weight: 600; color: var(--coral); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+    .section-title { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 24px; }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .sobre-text { font-size: 16px; color: var(--text-muted); line-height: 1.85; }
+    .sobre-text p { margin-bottom: 16px; }
+    .sobre-text strong { color: var(--text); font-weight: 600; }
+    .sobre-cards { display: flex; flex-direction: column; gap: 16px; }
+    .sobre-card { background: var(--bg-soft); border: 0.5px solid var(--coral-border); border-radius: 16px; padding: 20px 24px; transition: transform 0.2s, border-color 0.2s; }
+    .sobre-card:hover { transform: translateY(-3px); border-color: var(--coral-light); }
+    .sobre-card-icon { font-size: 24px; margin-bottom: 8px; }
+    .sobre-card-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .sobre-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
-    .section-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--coral);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
+    /* VALORES */
+    .valores { background: var(--coral-pale); padding: 64px; }
+    .valores-inner { max-width: 1100px; margin: 0 auto; }
+    .valores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .valor-card { background: #fff; border-radius: 16px; padding: 28px; border: 0.5px solid var(--coral-border); }
+    .valor-num { font-size: 40px; font-weight: 700; color: var(--coral-pale); line-height: 1; margin-bottom: 8px; -webkit-text-stroke: 2px var(--coral-light); }
+    .valor-title { font-size: 16px; font-weight: 600; color: var(--coral-darker); margin-bottom: 8px; }
+    .valor-desc { font-size: 14px; color: var(--coral-dark); line-height: 1.6; }
 
-    .section-title {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 40px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .proj-card {
-      border: 0.5px solid var(--coral-border);
-      border-radius: 16px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
+    /* PROJETOS */
+    .projects { padding: 72px 64px; max-width: 1100px; margin: 0 auto; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+    .proj-card { border: 0.5px solid var(--coral-border); border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; display: block; }
     .proj-card:hover { border-color: var(--coral); transform: translateY(-4px); }
-
-    .proj-thumb {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      font-weight: 700;
-    }
-
+    .proj-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 700; position: relative; overflow: hidden; }
     .thumb-coral { background: var(--coral-pale); color: var(--coral); }
     .thumb-teal  { background: #E1F5EE; color: #1D9E75; }
-    .thumb-purple { background: #EEEDFE; color: #534AB7; }
-
+    .thumb-dark  { background: #1a1d27; color: #7F77DD; }
     .proj-info { padding: 20px; }
+    .proj-tag { font-size: 11px; font-weight: 500; color: var(--coral-dark); background: var(--coral-pale); padding: 3px 10px; border-radius: 12px; display: inline-block; margin-bottom: 10px; }
+    .proj-name { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+    .proj-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-    .proj-tag {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--coral-dark);
-      background: var(--coral-pale);
-      padding: 3px 10px;
-      border-radius: 12px;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
+    /* HABILIDADES INTERATIVAS */
+    .habilidades { background: #1a1a2e; padding: 72px 64px; }
+    .habilidades-inner { max-width: 1100px; margin: 0 auto; }
+    .habilidades-title { font-size: 36px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .habilidades-sub { font-size: 16px; color: #949EB1; margin-bottom: 48px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .skill-item { }
+    .skill-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .skill-name { font-size: 14px; font-weight: 500; color: #E8EEFF; }
+    .skill-pct { font-size: 14px; font-weight: 600; color: var(--coral-light); }
+    .skill-track { background: #252836; border-radius: 4px; height: 6px; overflow: hidden; }
+    .skill-fill { height: 6px; border-radius: 4px; background: var(--coral); width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+    .tools-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+    .tool-badge { background: #252836; color: #AFA9EC; font-size: 13px; padding: 8px 16px; border-radius: 20px; border: 1px solid #2a2d3a; transition: background 0.2s, transform 0.15s; cursor: default; }
+    .tool-badge:hover { background: #2a2062; border-color: #7F77DD; color: #fff; transform: translateY(-2px); }
 
-    .proj-name {
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .proj-desc {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ABOUT */
-    .about {
-      background: var(--coral-pale);
-      padding: 64px;
-    }
-
-    .about-inner {
-      display: flex;
-      gap: 64px;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .about-text { flex: 1; }
-
-    .about-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--coral-darker);
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
-    }
-
-    .about-desc {
-      font-size: 16px;
-      color: var(--coral-dark);
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-
-    .about-stats {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 16px 24px;
-      border: 0.5px solid var(--coral-border);
-      text-align: center;
-      min-width: 100px;
-    }
-
-    .stat-num {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--coral);
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: var(--coral-dark);
-      margin-top: 4px;
-    }
-
-    /* CONTACT */
-    .contact {
-      padding: 80px 64px;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-title {
-      font-size: 40px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
-    }
-
-    .contact-title span { color: var(--coral); }
-
-    .contact-desc {
-      font-size: 16px;
-      color: var(--text-muted);
-      margin-bottom: 36px;
-      line-height: 1.7;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .contact-link {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--coral);
-      border: 1.5px solid var(--coral-light);
-      padding: 12px 24px;
-      border-radius: 24px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    .contact-link:hover { background: var(--coral-pale); transform: translateY(-1px); }
-
-    .contact-link.primary {
-      background: var(--coral);
-      color: #fff;
-      border-color: var(--coral);
-    }
-
-    .contact-link.primary:hover { background: var(--coral-dark); }
+    /* CONTATO */
+    .contato { padding: 80px 64px; }
+    .contato-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .contato-title { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .contato-title span { color: var(--coral); }
+    .contato-desc { font-size: 16px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.7; }
+    .contato-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px; }
+    .contato-card { background: var(--coral-pale); border: 0.5px solid var(--coral-border); border-radius: 16px; padding: 20px; text-align: left; text-decoration: none; color: inherit; transition: transform 0.2s, border-color 0.2s; }
+    .contato-card:hover { transform: translateY(-3px); border-color: var(--coral); }
+    .contato-card-icon { font-size: 24px; margin-bottom: 10px; }
+    .contato-card-label { font-size: 11px; font-weight: 600; color: var(--coral-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .contato-card-value { font-size: 14px; color: var(--coral-darker); font-weight: 500; }
+    .contato-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .contato-link { font-size: 14px; font-weight: 500; color: var(--coral); border: 1.5px solid var(--coral-light); padding: 12px 24px; border-radius: 24px; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+    .contato-link:hover { background: var(--coral-pale); transform: translateY(-1px); }
+    .contato-link.primary { background: var(--coral); color: #fff; border-color: var(--coral); }
+    .contato-link.primary:hover { background: var(--coral-dark); }
 
     /* FOOTER */
-    footer {
-      padding: 24px 64px;
-      border-top: 0.5px solid var(--coral-border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-name {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--coral-darker);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-links a {
-      font-size: 13px;
-      color: var(--coral);
-      text-decoration: none;
-    }
-
+    footer { padding: 24px 64px; border-top: 0.5px solid var(--coral-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-name { font-size: 14px; font-weight: 500; color: var(--coral-darker); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 13px; color: var(--coral); text-decoration: none; }
     .footer-links a:hover { text-decoration: underline; }
+
+    /* CURSOR PERSONALIZADO */
+    .cursor-dot { width: 8px; height: 8px; background: var(--coral); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: transform 0.1s; }
+    .cursor-ring { width: 32px; height: 32px; border: 2px solid var(--coral-light); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: all 0.15s ease; opacity: 0.6; }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -440,22 +151,30 @@
       .hero-badge { right: 0; }
       .skills-strip { padding: 0 24px 40px; }
       .divider { margin: 0 24px; }
+      .sobre { padding: 48px 24px; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
+      .valores { padding: 48px 24px; }
+      .valores-grid { grid-template-columns: 1fr; }
       .projects { padding: 48px 24px; }
-      .about { padding: 48px 24px; }
-      .about-inner { flex-direction: column; gap: 32px; }
-      .contact { padding: 48px 24px; }
+      .habilidades { padding: 48px 24px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .contato { padding: 48px 24px; }
+      .contato-grid { grid-template-columns: 1fr; }
       footer { padding: 20px 24px; flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
   <nav>
     <a href="#" class="nav-logo">leticia mendes</a>
     <ul class="nav-links">
       <li><a href="#sobre">sobre</a></li>
       <li><a href="#projetos">projetos</a></li>
+      <li><a href="#habilidades">habilidades</a></li>
       <li><a href="#contato">contato</a></li>
     </ul>
     <a href="mailto:katesdrew@hotmail.com" class="nav-cta">contato</a>
@@ -478,12 +197,12 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- SKILLS PILLS -->
   <div class="skills-strip">
     <span class="skill-pill">Figma</span>
     <span class="skill-pill">UX Research</span>
     <span class="skill-pill">UX Writing</span>
-    <span class="skill-pill">HTML & CSS</span>
+    <span class="skill-pill">HTML e CSS</span>
     <span class="skill-pill">JavaScript</span>
     <span class="skill-pill">Acessibilidade</span>
     <span class="skill-pill">Prototipação</span>
@@ -492,9 +211,70 @@
 
   <div class="divider"></div>
 
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <p class="section-eyebrow">sobre mim</p>
+    <h2 class="section-title">Design com propósito,<br>código com intenção</h2>
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <p>Sou <strong>Leticia Mendes</strong>, designer e desenvolvedora baseada em Ilhéus, Bahia. Estudo <strong>Design Visual e Experiência do Usuário</strong> na Uniasselvi, com formação prevista para o primeiro semestre de 2026, e <strong>Análise e Desenvolvimento de Sistemas</strong> na Uninter.</p>
+        <p>Cresci acreditando que tecnologia deveria funcionar para todos, não apenas para quem tem acesso fácil a ela. Por isso <strong>acessibilidade não é um recurso extra no meu trabalho</strong>, é o ponto de partida. Cada decisão de design começa com a pergunta: quem pode estar sendo excluído aqui?</p>
+        <p>Tenho um lado curioso que me impede de parar só no design. Gosto de entender o código que vai dar vida às telas que crio, e isso me torna uma ponte natural entre designers e desenvolvedores.</p>
+        <p>Fora do computador, divido minha vida em Ilhéus com meu noivo e três gatinhas que supervisionam cada projeto com olhar crítico.</p>
+      </div>
+      <div class="sobre-cards">
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🎓</div>
+          <div class="sobre-card-title">Formação em andamento</div>
+          <div class="sobre-card-desc">Design Visual e UX na Uniasselvi (formatura em 2026) e Análise e Desenvolvimento de Sistemas na Uninter.</div>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">♿</div>
+          <div class="sobre-card-title">Acessibilidade como valor</div>
+          <div class="sobre-card-desc">Acredito na inclusão digital como direito. Todos os meus projetos têm acessibilidade como prioridade, não como opcional.</div>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🔗</div>
+          <div class="sobre-card-title">Design e código juntos</div>
+          <div class="sobre-card-desc">Sei prototipar no Figma e transformar o design em código HTML, CSS e JavaScript. A ponte entre as duas áreas é o meu diferencial.</div>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">📍</div>
+          <div class="sobre-card-title">Ilhéus, Bahia</div>
+          <div class="sobre-card-desc">Disponível para trabalho remoto e aberta a oportunidades em todo o Brasil.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <div class="valores">
+    <div class="valores-inner">
+      <p class="section-eyebrow" style="color:var(--coral-dark)">o que me move</p>
+      <h2 class="section-title" style="color:var(--coral-darker)">Três valores que guiam<br>cada projeto</h2>
+      <div class="valores-grid">
+        <div class="valor-card">
+          <div class="valor-num">01</div>
+          <div class="valor-title">Inclusão acima de tudo</div>
+          <div class="valor-desc">Design que não alcança todo tipo de pessoa não está completo. Idosos, pessoas com deficiência, usuários com baixo letramento digital — todos merecem experiências dignas.</div>
+        </div>
+        <div class="valor-card">
+          <div class="valor-num">02</div>
+          <div class="valor-title">Clareza antes de estética</div>
+          <div class="valor-desc">Uma interface bonita que confunde o usuário falhou. Priorizo hierarquia, fluxo e linguagem clara antes de qualquer decisão visual.</div>
+        </div>
+        <div class="valor-card">
+          <div class="valor-num">03</div>
+          <div class="valor-title">Curiosidade constante</div>
+          <div class="valor-desc">Sou estudante por escolha, não só por necessidade. Gosto de entender o porquê das coisas, seja em UX, código ou qualquer outra área que apareça no caminho.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- PROJETOS -->
   <section class="projects" id="projetos">
-    <p class="section-label">portfólio</p>
+    <p class="section-eyebrow">portfólio</p>
     <h2 class="section-title">Projetos selecionados</h2>
     <div class="projects-grid">
 
@@ -502,65 +282,110 @@
         <div class="proj-thumb thumb-coral">Gov</div>
         <div class="proj-info">
           <span class="proj-tag">UX Case Study</span>
-          <h3 class="proj-name">Redesign de Portal Governamental</h3>
-          <p class="proj-desc">Pesquisa, arquitetura da informação, wireframes e protótipo com foco em acessibilidade.</p>
+          <h3 class="proj-name">Redesign do Portal GOV.BR</h3>
+          <p class="proj-desc">Redesign do fluxo de autenticação com foco em acessibilidade para idosos e pessoas com baixo letramento digital.</p>
         </div>
       </a>
 
       <a href="case-finn.html" class="proj-card">
         <div class="proj-thumb thumb-teal">Fin</div>
         <div class="proj-info">
-          <span class="proj-tag">UX/UI · Mobile</span>
-          <h3 class="proj-name">App de Finanças Pessoais</h3>
-          <p class="proj-desc">Em breve do zero ao protótipo de alta fidelidade, com pesquisa com usuários e UI kit completo.</p>
+          <span class="proj-tag">UX/UI Mobile</span>
+          <h3 class="proj-name">Finn: App de Finanças</h3>
+          <p class="proj-desc">Controle de gastos para jovens adultos. Do zero ao protótipo de alta fidelidade, com pesquisa com usuários e UI kit completo.</p>
         </div>
       </a>
 
-      <a href="#" class="proj-card">
-        <div class="proj-thumb thumb-purple">Web</div>
+      <a href="case-univirtus.html" class="proj-card">
+        <div class="proj-thumb thumb-dark">AVA</div>
         <div class="proj-info">
-          <span class="proj-tag">Redesign · Front-end</span>
-          <h3 class="proj-name">Redesign de Site Real</h3>
-          <p class="proj-desc">Em breve análise heurística completa e redesign com entrega em código HTML/CSS.</p>
+          <span class="proj-tag">Redesign e Front-end</span>
+          <h3 class="proj-name">Univirtus AVA Redesign</h3>
+          <p class="proj-desc">Redesign completo da plataforma de ensino da Uninter. Interface antiquada transformada em dark mode moderno e sofisticado.</p>
         </div>
       </a>
 
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section class="about" id="sobre">
-    <div class="about-inner">
-      <div class="about-text">
-        <h2 class="about-title">Sobre mim</h2>
-        <p class="about-desc">Sou Leticia Mendes, estudante de Análise e Desenvolvimento de Sistemas com foco em UX/UI Design, UX Writing e desenvolvimento Front-end. Gosto de criar interfaces intuitivas, acessíveis e centradas no usuário, unindo design, tecnologia e comunicação para transformar problemas reais em experiências digitais simples e eficientes.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <div class="stat-num">3</div>
-            <div class="stat-label">projetos</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">2+</div>
-            <div class="stat-label">anos estudando</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">5+</div>
-            <div class="stat-label">ferramentas</div>
-          </div>
+  <!-- HABILIDADES -->
+  <section class="habilidades" id="habilidades">
+    <div class="habilidades-inner">
+      <p class="section-eyebrow" style="color:var(--coral-light)">habilidades</p>
+      <h2 class="habilidades-title">Onde estou hoje</h2>
+      <p class="habilidades-sub">Uma visão honesta das minhas competências técnicas e criativas.</p>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">UX Design e Research</span><span class="skill-pct">82%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="82"></div></div>
         </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Figma e Prototipação</span><span class="skill-pct">78%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">HTML e CSS</span><span class="skill-pct">75%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">UX Writing</span><span class="skill-pct">80%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">55%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="55"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Acessibilidade (WCAG)</span><span class="skill-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-pct="70"></div></div>
+        </div>
+      </div>
+      <div class="tools-row">
+        <span class="tool-badge">Figma</span>
+        <span class="tool-badge">HTML5</span>
+        <span class="tool-badge">CSS3</span>
+        <span class="tool-badge">JavaScript</span>
+        <span class="tool-badge">Git e GitHub</span>
+        <span class="tool-badge">Design Thinking</span>
+        <span class="tool-badge">Wireframes</span>
+        <span class="tool-badge">Notion</span>
+        <span class="tool-badge">Pacote Office</span>
+        <span class="tool-badge">Behance</span>
       </div>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section class="contact" id="contato">
-    <h2 class="contact-title">Vamos <span>conversar?</span></h2>
-    <p class="contact-desc">Estou disponível para oportunidades, freelas e parcerias. Me chame!</p>
-    <div class="contact-links">
-      <a href="mailto:katesdrew@hotmail.com" class="contact-link primary">enviar e-mail</a>
-      <a href="https://www.linkedin.com/in/leticia-mendes-27755b244/" target="_blank" class="contact-link">LinkedIn</a>
-      <a href="https://github.com/venusvvv" target="_blank" class="contact-link">GitHub</a>
-      <a href="https://www.behance.net/leticiamend" target="_blank" class="contact-link">Behance</a>
+  <section class="contato" id="contato">
+    <div class="contato-inner">
+      <h2 class="contato-title">Vamos <span>conversar?</span></h2>
+      <p class="contato-desc">Estou disponível para oportunidades, freelas e parcerias. Me chame por qualquer um dos canais abaixo.</p>
+      <div class="contato-grid">
+        <a href="mailto:katesdrew@hotmail.com" class="contato-card">
+          <div class="contato-card-icon">✉️</div>
+          <div class="contato-card-label">E-mail</div>
+          <div class="contato-card-value">katesdrew@hotmail.com</div>
+        </a>
+        <a href="https://wa.me/5573818005052" target="_blank" class="contato-card">
+          <div class="contato-card-icon">💬</div>
+          <div class="contato-card-label">WhatsApp</div>
+          <div class="contato-card-value">(73) 8180-5052</div>
+        </a>
+        <a href="https://linkedin.com/in/leticia-mendes-27755b244" target="_blank" class="contato-card">
+          <div class="contato-card-icon">💼</div>
+          <div class="contato-card-label">LinkedIn</div>
+          <div class="contato-card-value">leticia-mendes-27755b244</div>
+        </a>
+        <a href="https://www.behance.net/leticiamend" target="_blank" class="contato-card">
+          <div class="contato-card-icon">🎨</div>
+          <div class="contato-card-label">Behance</div>
+          <div class="contato-card-value">behance.net/leticiamend</div>
+        </a>
+      </div>
+      <div class="contato-links">
+        <a href="https://github.com/venusvvv" target="_blank" class="contato-link">GitHub</a>
+        <a href="mailto:katesdrew@hotmail.com" class="contato-link primary">enviar e-mail</a>
+      </div>
     </div>
   </section>
 
@@ -569,11 +394,94 @@
     <span class="footer-name">leticia mendes · 2025</span>
     <div class="footer-links">
       <a href="mailto:katesdrew@hotmail.com">e-mail</a>
-      <a href="https://www.linkedin.com/in/leticia-mendes-27755b244/" target="_blank">LinkedIn</a>
+      <a href="https://linkedin.com/in/leticia-mendes-27755b244" target="_blank">LinkedIn</a>
       <a href="https://github.com/venusvvv" target="_blank">GitHub</a>
       <a href="https://www.behance.net/leticiamend" target="_blank">Behance</a>
     </div>
   </footer>
+
+  <script>
+    // Cursor personalizado
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      dot.style.left = mouseX + 'px';
+      dot.style.top = mouseY + 'px';
+    });
+    function animateRing() {
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+      ring.style.left = ringX + 'px';
+      ring.style.top = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    document.querySelectorAll('a, button, .proj-card, .sobre-card, .contato-card').forEach(el => {
+      el.addEventListener('mouseenter', () => { ring.style.transform = 'translate(-50%,-50%) scale(1.6)'; ring.style.borderColor = 'var(--coral)'; ring.style.opacity = '1'; });
+      el.addEventListener('mouseleave', () => { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.borderColor = 'var(--coral-light)'; ring.style.opacity = '0.6'; });
+    });
+
+    // Animação das barras de habilidade ao entrar na viewport
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+            const pct = bar.getAttribute('data-pct');
+            setTimeout(() => { bar.style.width = pct + '%'; }, 200);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    const grid = document.getElementById('skillsGrid');
+    if (grid) observer.observe(grid);
+
+    // Typing effect no hero
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+      const span = heroTitle.querySelector('span');
+      const fullText = span.textContent;
+      span.textContent = '';
+      let i = 0;
+      function typeChar() {
+        if (i < fullText.length) {
+          span.textContent += fullText[i++];
+          setTimeout(typeChar, 60);
+        }
+      }
+      setTimeout(typeChar, 800);
+    }
+
+    // Scroll reveal suave
+    const revealEls = document.querySelectorAll('.proj-card, .sobre-card, .valor-card, .contato-card');
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = entry.target.style.transform.replace('translateY(24px)', 'translateY(0)') || 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      revealObs.observe(el);
+    });
+
+    // Contador animado nos stats (se existirem)
+    document.querySelectorAll('.stat-num-anim').forEach(el => {
+      const target = parseInt(el.getAttribute('data-target'));
+      let count = 0;
+      const step = Math.ceil(target / 40);
+      const timer = setInterval(() => {
+        count = Math.min(count + step, target);
+        el.textContent = count;
+        if (count >= target) clearInterval(timer);
+      }, 40);
+    });
+  </script>
 
 </body>
 </html>
